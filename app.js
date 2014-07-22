@@ -23,6 +23,7 @@ app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
+app.use(bodyParser({ keepExtensions: true, uploadDir: './public/images' }));
 app.use(cookieParser());
 app.use(session({
     secret: settings.cookieSecret,
